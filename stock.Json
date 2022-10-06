@@ -1,0 +1,13 @@
+[
+
+    {"id": 1, "nombre": "EL SALVADOR",  "tipo": "Café Salvadoreño", "cantidad": 1, "desc": "Suave", "precio": 34000, "marca": "503", "img": "./img/sv1.jpg"},
+    {"id": 2, "nombre": "EL SALVADOR",  "tipo": "Café Salvadoreño", "cantidad": 1, "desc": "Medio", "precio": 61100, "marca": "503", "img": "./img/sv2.jpg"},
+    {"id": 3, "nombre": "EL SALVADOR ", "tipo": "Café Salvadoreño", "cantidad": 1, "desc": "Fuerte", "precio": 31200, "marca": "503", "img": "./img/sv3.jpg"},
+    {"id": 4, "nombre": "EL SALVADOR", "tipo": "Café Salvadoreño", "cantidad": 1, "desc": "Muy fuerte", "precio": 31400, "marca": "503", "img": "./img/sv4.jpg"}
+    
+
+
+
+
+
+]

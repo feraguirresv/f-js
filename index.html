@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COFFE 503</title>
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="icon" href="./img/icono1.ico">
+    <script defer src="stock.js"></script>
+    <script defer src="modal.js"></script>
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <header>
+        <h1 id="titulo" class="titulo">COFFE 503</h1>
+        <h2>Café 100% Salvadoreño</h2>
+        <h5>San Salvador, El Salvador</h5>
+        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+    </header>
+
+   
+   <h2>Productos</h2>
+
+   <HR></HR>
+
+
+    <main id="contenedor-productos">
+
+    </main>
+
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor">
+               
+            </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+            <button id="comprar-carrito2" class="boton-agregar">Comprar</button>
+        </div>
+    </div>
+    
+   
+
+        <footer >
+
+            <h3>El Salvador, San Salvador</h3>
+                  <ul class="list-inline">
+                      <li>
+                          <a  target="_blank" href="https://es-la.facebook.com/" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                      </li>
+                      <li>
+                          <a  target="_blank" href="https://twitter.com/?lang=es" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                      </li>
+                      <li>
+                          <a  target="_blank" href="https://www.instagram.com/?hl=es" class="btn-social btn-outline"><i class="fa fa-fw fa-instagram"></i></a>
+                      </li>
+                  </ul>
+                  <h3> Consejo Salvadoreño del Café, Procafé</h3>
+                  <p>Fórum Cultural del Café © 2019-2020 / Revista en papel ISSN 2696-3035 / Revista Digital ISSN 2696-3043</p>
+
+                </footer>
+    
+               
+                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
+    
+    
