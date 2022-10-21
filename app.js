@@ -39,6 +39,7 @@ botonVaciar.addEventListener('click', () => {
 
           )
           carrito.length = 0
+          localStorage.Clear()
         actualizarCarrito()
         }
       })} else{
