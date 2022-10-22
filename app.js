@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 botonVaciar.addEventListener('click', () => {
                                 
     
-    if (carrito.length >= 0 ) { Swal.fire({
+    if (carrito.length >= 1 ) { Swal.fire({
         title: 'Estas seguro de eliminar todos los productos?',
         icon: 'warning',
         showCancelButton: true,
@@ -40,8 +40,7 @@ botonVaciar.addEventListener('click', () => {
           )
           carrito.length = 0
           local.StorageClear(); 
-        
-          actualizarCarrito()
+          actualizarCarrito();
         }
       })} else{
         Swal.fire({                                             
