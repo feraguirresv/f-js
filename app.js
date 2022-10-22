@@ -39,8 +39,7 @@ botonVaciar.addEventListener('click', () => {
 
           )
           carrito.length = 0
-          local.StorageClear(); 
-          actualizarCarrito();
+        actualizarCarrito()
         }
       })} else{
         Swal.fire({                                             
