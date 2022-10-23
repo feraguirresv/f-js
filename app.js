@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('carrito')){
         carrito = JSON.parse(localStorage.getItem('carrito'))
         actualizarCarrito()
+        localStorage.Clear()
     }
 })
 
@@ -38,8 +39,9 @@ botonVaciar.addEventListener('click', () => {
             'success'
 
           )
-          localStorage.Clear()
+          
           carrito.length = 0
+          
          actualizar.Carrito()
         }
       
