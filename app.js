@@ -38,9 +38,9 @@ botonVaciar.addEventListener('click', () => {
             'success'
 
           )
-          carrito.length = 0
           localStorage.Clear()
-        actualizar.Carrito()
+          carrito.length = 0
+         actualizar.Carrito()
         }
       
     })} else{
