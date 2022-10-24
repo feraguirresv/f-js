@@ -39,9 +39,9 @@ botonVaciar.addEventListener('click', () => {
             'success'
 
           )
-          
+          console.log
           carrito.length = 0
-          
+          console.log
          actualizar.Carrito()
         }
       
