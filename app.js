@@ -39,7 +39,7 @@ Swal.fire(
 )
 carrito.length = 0
 actualizarCarrito()
-localStorage.Clear()
+(localStorage.Clear( 'carrito') )
 }
 })
 
