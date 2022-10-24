@@ -21,54 +21,39 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 botonVaciar.addEventListener('click', () => {
-                                
-    
-    if (carrito.length >= 0 ) 
-    
-    {
-        
-        Swal.fire({
-        title: 'Estas seguro de eliminar todos los productos?',
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'SI, ELIMINAR!'
-      }).then((result) => {
-        if (result.isConfirmed) {
-          Swal.fire(
-            'Eliminados!',
-            'Ahora tu carrito esta vacio.',
-            'success'
+    // SE AÑADIO SWEET ALERT PARA VACIAR EL CARRITO A 0 CON CONFIRMACION
+Swal.fire({
+title: 'Estas seguro de eliminar todos los productos?',
+icon: 'warning',
+showCancelButton: true,
+confirmButtonColor: '#3085d6',
+cancelButtonColor: '#d33',
+confirmButtonText: 'SI, ELIMINAR!'
+}).then((result) => {
+if (result.isConfirmed) {
+Swal.fire(
+'Eliminados!',
+'Ahora tu carrito esta vacio.',
+'success'
 
-          )
-          carrito.length = 0
-          localStorage.Clear()
-        actualizarCarrito()
-        }
-      })} else{
-        Swal.fire({                                             
-            icon: 'error',
-            title: 'El carrito esta vacio',                
-            
-            
-          }) }
-    
-  
-  
+)
+carrito.length = 0
+actualizarCarrito()
+}
+})
+
 })
 
 
-const pedirhard = async () => {
-    const resp = await
-    fetch ("/stock.Json")
-     datahard = await resp.json()
+async function pedirhard() {
+    const resp = await fetch("/stock.Json")
+    datahard = await resp.json()
 
-   
-datahard.forEach((producto) => {
-    const div = document.createElement('div')
-    div.classList.add('producto')
-    div.innerHTML = `
+
+    datahard.forEach((producto) => {
+        const div = document.createElement('div')
+        div.classList.add('producto')
+        div.innerHTML = `
     <img class="cardimg"  src=${producto.img} alt= "">
     <h3>${producto.nombre}</h3>
     <p>${producto.desc}</p>
@@ -76,18 +61,18 @@ datahard.forEach((producto) => {
     <p class="precioProducto">Precio:$ ${producto.precio}</p>
     <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
     `
-    contenedorProductos.appendChild(div)
+        contenedorProductos.appendChild(div)
 
-    
-    const boton = document.getElementById(`agregar${producto.id}`)
-    
 
-    boton.addEventListener('click', () => {
-        
-        agregarAlCarrito(producto.id)
-       
+        const boton = document.getElementById(`agregar${producto.id}`)
+
+
+        boton.addEventListener('click', () => {
+
+            agregarAlCarrito(producto.id)
+
+        })
     })
-})
 
 }
 
