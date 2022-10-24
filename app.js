@@ -17,14 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('carrito')){
         carrito = JSON.parse(localStorage.getItem('carrito'))
         actualizarCarrito()
-        
     }
 })
 
 botonVaciar.addEventListener('click', () => {
                                 
     
-    if (carrito.length >= 0 ) { Swal.fire({
+    if (carrito.length >= 1 ) { Swal.fire({
         title: 'Estas seguro de eliminar todos los productos?',
         icon: 'warning',
         showCancelButton: true,
@@ -39,13 +38,11 @@ botonVaciar.addEventListener('click', () => {
             'success'
 
           )
-       
           carrito.length = 0
           localStorage.Clear()
-         actualizar.Carrito()
+        actualizarCarrito()
         }
-      
-    })} else{
+      })} else{
         Swal.fire({                                             
             icon: 'error',
             title: 'El carrito esta vacio',                
@@ -57,9 +54,6 @@ botonVaciar.addEventListener('click', () => {
   
 })
 
-
-
-//SECCION FETCH 
 
 const pedirhard = async () => {
     const resp = await
@@ -185,8 +179,8 @@ const actualizarCarrito = () => {
             Swal.fire({                                 
                 
                 title: 'Muchas gracias por tu compra!!',
-                text: 'COFFE 503 TU TIENDA DE CONFIANZA.',
-                imageUrl: '/img/fondocss.png',
+                text: 'COFFE 503',
+                imageUrl: '/img/compu.jpg',
                 imageWidth: 600,
                 imageHeight: 400,
                 imageAlt: 'Custom image',
@@ -204,4 +198,3 @@ const actualizarCarrito = () => {
               })
          }   
          
- })
